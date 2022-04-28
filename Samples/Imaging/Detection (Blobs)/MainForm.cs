@@ -61,6 +61,9 @@ namespace SampleApp
         // Process image
         private void ProcessImage(Bitmap image)
         {
+            //blobsBrowser.Width = image.Width;
+            //blobsBrowser.Height = image.Height;
+          
             int foundBlobsCount = blobsBrowser.SetImage(image);
 
             blobsCountLabel.Text = string.Format("Found blobs' count: {0}", foundBlobsCount);

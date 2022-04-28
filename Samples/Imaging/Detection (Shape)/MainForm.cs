@@ -109,8 +109,10 @@ namespace SampleApp
             BlobCounter blobCounter = new BlobCounter();
 
             blobCounter.FilterBlobs = true;
-            blobCounter.MinHeight = 5;
-            blobCounter.MinWidth = 5;
+            blobCounter.MinHeight = 25;
+            blobCounter.MinWidth = 25;
+            blobCounter.BackgroundThreshold = Color.LightGray;
+
 
             blobCounter.ProcessImage(bitmapData);
             Blob[] blobs = blobCounter.GetObjectsInformation();

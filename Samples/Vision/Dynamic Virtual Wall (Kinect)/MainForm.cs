@@ -238,6 +238,7 @@ namespace SampleApp
 
 
             BlobCounter bc = new BlobCounter();
+            bc.BackgroundThreshold = Color.LightGray;
             bc.ObjectsOrder = ObjectsOrder.Area;
             bc.ProcessImage(mask8bit);
             var blobs = bc.GetObjectsInformation();
@@ -304,6 +305,7 @@ namespace SampleApp
                 var handMask8bit = Accord.Imaging.Image.Convert16bppTo8bpp(handMask.ToManagedImage());
 
                 BlobCounter bch = new BlobCounter();
+                bch.BackgroundThreshold = Color.LightGray;
                 bch.ObjectsOrder = ObjectsOrder.Area;
                 bch.ProcessImage(handMask8bit);
                 var blob = bch.GetObjectsInformation();
